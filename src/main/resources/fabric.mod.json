@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "magic-wand",
+	"version": "${version}",
+	"name": "Волшебная Палочка",
+	"description": "Просто мод на волшебную палочку",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/magic-wand/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.alx.magicwand.MagicWand"
+		],
+		"fabric-datagen": [
+			"net.alx.magicwand.MagicWandDataGenerator"
+		],
+        "client": [
+          "net.alx.magicwand.MagicWandClient"
+        ]
+	},
+	"mixins": [
+		"magic-wand.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
